@@ -60,6 +60,9 @@ Less Common
 - Deny/Accept
 - Transform meters ( name, tags, units )
 
+# Warnings
+
+Make sure - using automatic instrumentation - that you only instrument specific code/components.
 
 
 
