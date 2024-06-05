@@ -3,8 +3,6 @@ package io.opentelemetry.examples.feline;
 
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
-import io.micrometer.core.instrument.binder.jvm.JvmMemoryMetrics;
-import io.micrometer.core.instrument.binder.system.ProcessorMetrics;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,8 +19,7 @@ public class FelineController {
     this.numCombatants =
         Counter.builder("battles.combatants").tag("type", "feline").register(this.registry);
 
-    new ProcessorMetrics().bindTo(this.registry);
-    new JvmMemoryMetrics().bindTo(this.registry);
+    
   }
 
   @GetMapping("/getAnimal")
