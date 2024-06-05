@@ -62,7 +62,11 @@ Less Common
 
 # Warnings
 
-Make sure - using automatic instrumentation - that you only instrument specific code/components.
+Make sure - using automatic instrumentation - that you only instrument specific code/components.  
+ 
+**Sampling**
+
+We could theoretically only get a small sample of the 200OK, but how do you know at the top services if we are getting an error downstream?
 
 
 
